@@ -13,7 +13,9 @@ from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
-genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+api_key_secrectpass = st.secrets["api_key"]
+admin_secrectpass = st.secrets["admin_pass"]
+genai.configure(api_key=api_key_secrectpass)
 
 class UserActivityTracker:
     def __init__(self, db_path='user_activity.sqlite'):
