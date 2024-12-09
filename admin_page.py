@@ -11,7 +11,9 @@ from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
-genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+api_key_secrectpass = st.secrets["api_key"]
+admin_secrectpass = st.secrets["admin_pass"]
+genai.configure(api_key=api_key_secrectpass)
 
 class VectorDBManager:
     def __init__(self, db_dir='vector_databases'):
@@ -146,7 +148,7 @@ def admin_page():
         password = st.text_input("Password", type="password")
         
         if st.button("Login"):
-            if username == "admin" and password == "admin123":
+            if username == "admin" and password == admin_secrectpass:
                 st.session_state['logged_in'] = True
                 #st.experimental_rerun()
             else:
