@@ -43,3 +43,13 @@ def main():
 if __name__ == "__main__":
     genai.configure(api_key=api_key_secrectpass)
     main()
+    
+    hide_st_style = """ <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            ._profileContainer_gzau3_53 {visibility: hidden;}
+            _profilePreview_gzau3_63 {visibility: hidden;}
+            </style>"""
+
+    st.markdown(hide_st_style, unsafe_allow_html=True)
