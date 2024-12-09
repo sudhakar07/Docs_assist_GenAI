@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 # Import custom modules
 from admin_page import admin_page
-from user_chat_page import user_chat_page
+
 from user_chat_page_v1 import user_chat_page_v1
 
 # Load environment variables
