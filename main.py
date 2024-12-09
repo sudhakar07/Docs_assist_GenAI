@@ -19,7 +19,15 @@ genai.configure(api_key=api_key_secrectpass)
 
 def main():
     st.set_page_config(page_title="Document Assist", layout="wide")
-    
+    hide_st_style = """ <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            ._profileContainer_gzau3_53 {visibility: hidden;}
+            _profilePreview_gzau3_63 {visibility: hidden;}
+            </style>"""
+
+    st.markdown(hide_st_style, unsafe_allow_html=True)
     # Add navigation
     page = st.sidebar.radio("Navigate", ["Admin Page", "Document Assist"])
     st.sidebar.info("Developed by - Sudhakar G.")
