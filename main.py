@@ -14,7 +14,8 @@ from user_chat_page_v1 import user_chat_page_v1
 load_dotenv()
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyChNUtW6XZ5lUiWnFqU4SgcOEwLKeLq8q4")
+api_key_secrectpass = st.secrets["api_key"]
+genai.configure(api_key=api_key_secrectpass)
 
 def main():
     st.set_page_config(page_title="Document Assist", layout="wide")
@@ -30,5 +31,5 @@ def main():
     #     user_chat_page()
 
 if __name__ == "__main__":
-    genai.configure(api_key="AIzaSyChNUtW6XZ5lUiWnFqU4SgcOEwLKeLq8q4")
+    genai.configure(api_key=api_key_secrectpass)
     main()
