@@ -22,7 +22,7 @@ def main():
     
     # Add navigation
     page = st.sidebar.radio("Navigate", ["Admin Page", "Document Assist"])
-    st.sidebar.write("Developed by - Sudhakar G.")
+    st.sidebar.info("Developed by - Sudhakar G.")
     st.sidebar.info("Only for Learning Purpose.")
     
     if page == "Admin Page":
