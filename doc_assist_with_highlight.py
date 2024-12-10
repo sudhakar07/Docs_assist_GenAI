@@ -28,13 +28,9 @@ genai.configure(api_key=api_key_secrectpass)
 Groq_api_key_secrectpass = st.secrets["GROQ_API_KEY"]
 
 
-# Set page config
-st.set_page_config(page_title="📚 Chat-PDF")
 
-# Main content
-st.markdown(
-    "<h1 style='text-align: center;'>📚 Chat-PDF with Field highlight annotations</h1>", unsafe_allow_html=True
-)
+
+
 st.subheader("Upload a document to get started.")
 
 
