@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 from admin_page import admin_page
 
 from user_chat_page_v1 import user_chat_page_v1
-from doc_assist_with_highlight import doc_assist_with_highlight
+from response_highlight import doc_assist_with_highlight
 
 # Load environment variables
 load_dotenv()
