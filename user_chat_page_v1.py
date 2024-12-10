@@ -247,7 +247,7 @@ def get_username():
     return custom_username
 
 def user_chat_page_v1():
-    st.title("📄 Enhanced Document Chat Assistant")
+    st.title("📄  Document Chat Assistant")
     
     # Get username
     username = get_username()
