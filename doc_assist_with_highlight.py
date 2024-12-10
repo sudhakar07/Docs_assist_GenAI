@@ -23,7 +23,9 @@ from dotenv import load_dotenv
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
 load_dotenv()
-genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+api_key_secrectpass = st.secrets["api_key"]
+genai.configure(api_key=api_key_secrectpass)
+Groq_api_key_secrectpass = st.secrets["GROQ_API_KEY"]
 
 
 # Set page config
@@ -70,7 +72,7 @@ def locate_pages_containing_excerpts(document, excerpts):
 def initialize_language_model():
     return ChatGroq(
         temperature=0,
-        groq_api_key=os.getenv("GROQ_API_KEY"),
+        groq_api_key=Groq_api_key_secrectpass,
         model_name="mixtral-8x7b-32768"
     )
 
@@ -86,8 +88,7 @@ def initialize_language_model():
 
 @st.cache_resource
 def get_embeddings_google():
-    genai.configure(api_key='AIzaSyChNUtW6XZ5lUiWnFqU4SgcOEwLKeLq8q4')
-    os.environ["GOOGLE_API_KEY"] = 'AIzaSyChNUtW6XZ5lUiWnFqU4SgcOEwLKeLq8q4'
+    genai.configure(api_key=api_key_secrectpass)
     embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
     return embeddings
 
