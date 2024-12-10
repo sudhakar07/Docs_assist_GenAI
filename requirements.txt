@@ -57,4 +57,3 @@ langchain-google-genai
 streamlit-pdf-viewer
 langchain-groq
 langchain_community
-python-magic-bin
