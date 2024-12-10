@@ -5,7 +5,7 @@ import fitz
 import tempfile
 # from langchain.chains import RetrievalQA
 from langchain.chains import RetrievalQA
-from langchain_community.chains import PebbloRetrievalQA
+
 import io
 from streamlit_pdf_viewer import pdf_viewer
 import json
