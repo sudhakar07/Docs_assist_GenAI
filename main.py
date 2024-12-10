@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 from admin_page import admin_page
 
 from user_chat_page_v1 import user_chat_page_v1
+from doc_assist_with_highlight import doc_assist_with_highlight
 
 # Load environment variables
 load_dotenv()
@@ -29,7 +30,7 @@ def main():
 
     st.markdown(hide_st_style, unsafe_allow_html=True)
     # Add navigation
-    page = st.sidebar.radio("Navigate", ["Admin Page", "Document Assist"])
+    page = st.sidebar.radio("Navigate", ["Admin Page", "Document Assist", "DocAssist with Field-Highlight"])
     st.sidebar.info("Developed by - Sudhakar G.")
     st.sidebar.info("Only for Learning Purpose.")
     
@@ -37,6 +38,8 @@ def main():
         admin_page()
     if page == "Document Assist":
         user_chat_page_v1()
+    if page == "DocAssist with Field-Highlight":
+        response_highlight()
     # else:
     #     user_chat_page()
 
