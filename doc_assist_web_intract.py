@@ -81,7 +81,7 @@ def get_embeddings_google():
     api_key_secrectpass = st.secrets["api_key"]
     genai.configure(api_key=api_key_secrectpass)
     embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
-    st.write(embeddings)
+    st.write("get_embeddings_google")
     return embeddings
 
 # Store text chunks in a vector store using FAISS
