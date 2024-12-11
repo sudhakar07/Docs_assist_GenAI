@@ -37,31 +37,30 @@ def read_data(files, loader_type):
     documents = []
     for file in files:
         
-        with io.open(os.path.join('temp', file.name), 'wb') as f:
-            f.write(file.read())
-            tmp_file_path = f.name
-
-        st.write(tmp_file_path)
-        try:
-            if loader_type == "PDF":
-                pdf_reader = PdfReader(tmp_file_path)
-                for page_num, page in enumerate(pdf_reader.pages):
-                    text = page.extract_text()
-                    documents.append(Document(page_content=text, metadata={"source": file.name, "page_number": page_num + 1}))
-            elif loader_type == "Text":
-                loader = TextLoader(tmp_file_path)
-                docs = loader.load()
-                for doc in docs:
-                    doc.metadata["source"] = file.name
-                documents.extend(docs)
-            elif loader_type == "CSV":
-                loader = CSVLoader(tmp_file_path)
-                docs = loader.load()
-                for doc in docs:
-                    doc.metadata["source"] = file.name
-                documents.extend(docs)
-        finally:
-            os.remove(tmp_file_path)
+        with file as f:
+            
+            # st.write(tmp_file_path)
+            try:
+                if loader_type == "PDF":
+                    pdf_reader = PdfReader(f)
+                    for page_num, page in enumerate(pdf_reader.pages):
+                        text = page.extract_text()
+                        documents.append(Document(page_content=text, metadata={"source": f.name, "page_number": page_num + 1}))
+                elif loader_type == "Text":
+                    loader = TextLoader(f)
+                    docs = loader.load()
+                    for doc in docs:
+                        doc.metadata["source"] = f.name
+                    documents.extend(docs)
+                elif loader_type == "CSV":
+                    loader = CSVLoader(f)
+                    docs = loader.load()
+                    for doc in docs:
+                        doc.metadata["source"] = f.name
+                    documents.extend(docs)
+            finally:
+                #os.remove(tmp_file_path)
+                st.write("")
 
     # st.write(documents)
     return documents
