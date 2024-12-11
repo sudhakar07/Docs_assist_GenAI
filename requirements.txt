@@ -57,3 +57,7 @@ langchain-google-genai
 streamlit-pdf-viewer
 langchain-groq
 langchain_community
+yfinance
+plotly
+beautifulsoup4
+requests
