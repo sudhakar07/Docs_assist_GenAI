@@ -78,6 +78,7 @@ def get_chunks(texts, chunk_size, chunk_overlap):
     return chunks
 
 def get_embeddings_google():
+    api_key_secrectpass = st.secrets["api_key"]
     genai.configure(api_key=api_key_secrectpass)
     embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
     st.write(embeddings)
