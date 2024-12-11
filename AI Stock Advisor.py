@@ -141,7 +141,7 @@ class AIStockAdvisor:
         )
         return fig
 
-def main():
+def main_AIStockAdvisor():
     st.title('🚀 AI Stock Advisor')
     st.sidebar.header('Stock Selection')
 
@@ -189,7 +189,7 @@ def main():
             st.markdown(f"**{article['title']}**\n{article['link']}")
 
 if __name__ == "__main__":
-    main()
+    main_AIStockAdvisor()
 
 # Required dependencies (requirements.txt)
 # streamlit
