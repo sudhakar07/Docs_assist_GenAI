@@ -11,7 +11,7 @@ from admin_page import admin_page
 from user_chat_page_v1 import user_chat_page_v1
 from doc_assist_with_highlight import response_highlight
 from doc_assist_web_intract import main_web_intract
-from AI Stock Advisor import main_AIStockAdvisor
+from ai_stock_advisor import main_AIStockAdvisor
 
 # Load environment variables
 load_dotenv()
