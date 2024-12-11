@@ -8,9 +8,9 @@ import plotly.express as px
 from datetime import datetime, timedelta
 
 # Gemini API Configuration
-genai.configure(api_key='AIzaSyChNUtW6XZ5lUiWnFqU4SgcOEwLKeLq8q4')
-# os.environ["GOOGLE_API_KEY"] = 'AIzaSyChNUtW6XZ5lUiWnFqU4SgcOEwLKeLq8q4'
-# genai.configure(api_key=GEMINI_API_KEY)
+api_key_secrectpass = st.secrets["api_key"]
+genai.configure(api_key=api_key_secrectpass)
+
 
 # Top Company Symbols
 TOP_STOCKS = [
