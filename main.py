@@ -10,6 +10,8 @@ from admin_page import admin_page
 
 from user_chat_page_v1 import user_chat_page_v1
 from doc_assist_with_highlight import response_highlight
+from doc_assist_web_intract import main_web_intract
+from AI Stock Advisor import main_AIStockAdvisor
 
 # Load environment variables
 load_dotenv()
@@ -21,7 +23,7 @@ genai.configure(api_key=api_key_secrectpass)
 def main():
    
     # Add navigation
-    page = st.sidebar.radio("Navigate", ["Admin Page", "Document Assist", "DocAssist with Field-Highlight"])
+    page = st.sidebar.radio("Navigate", ["Admin Page", "Document Assist", "DocAssist with Field-Highlight","LLM Intract","AI Stock Advisor"])
     st.sidebar.info("Developed by - Sudhakar G.")
     st.sidebar.info("Only for Learning Purpose.")
     
@@ -31,6 +33,10 @@ def main():
         user_chat_page_v1()
     if page == "DocAssist with Field-Highlight":
         response_highlight()
+   if page == "LLM Intract":
+        main_web_intract()
+   if page == "AI Stock Advisor":
+        main_AIStockAdvisor()
     # else:
     #     user_chat_page()
 
