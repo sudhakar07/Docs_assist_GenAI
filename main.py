@@ -33,9 +33,9 @@ def main():
         user_chat_page_v1()
     if page == "DocAssist with Field-Highlight":
         response_highlight()
-   if page == "LLM Intract":
+    if page == "LLM Intract":
         main_web_intract()
-   if page == "AI Stock Advisor":
+    if page == "AI Stock Advisor":
         main_AIStockAdvisor()
     # else:
     #     user_chat_page()
