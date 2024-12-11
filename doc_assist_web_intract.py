@@ -187,7 +187,7 @@ def user_input(user_question, embedding_model_name, vector_store_path, num_docs,
         st.markdown("<hr style='border:1px solid gray;'>", unsafe_allow_html=True)
 
 # Main function to run the Streamlit app
-def main():
+def main_web_intract():
     st.set_page_config(page_title="Ollama: Chat with your Files")
     st.header("Chat with Your Files using Llama3 or Mistral")
 
@@ -252,4 +252,4 @@ def main():
     
 
 if __name__ == "__main__":
-    main()
+    main_web_intract()
