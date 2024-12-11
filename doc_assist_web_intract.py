@@ -188,7 +188,7 @@ def user_input(user_question, embedding_model_name, vector_store_path, num_docs,
 
 # Main function to run the Streamlit app
 def main_web_intract():
-    st.set_page_config(page_title="Ollama: Chat with your Files")
+    
     st.header("Chat with Your Files using Llama3 or Mistral")
 
     # Add GitHub link below the header
