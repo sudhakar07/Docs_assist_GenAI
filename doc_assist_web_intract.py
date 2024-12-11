@@ -62,7 +62,7 @@ def read_data(files, loader_type):
                 #os.remove(tmp_file_path)
                 st.write("")
 
-    # st.write(documents)
+    st.write(documents)
     return documents
 
 # Split text into chunks
