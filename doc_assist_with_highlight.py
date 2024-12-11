@@ -85,6 +85,7 @@ def initialize_language_model():
 
 def get_embeddings_google():
     genai.configure(api_key=api_key_secrectpass)
+    os.environ["GOOGLE_API_KEY"] = api_key_secrectpass
     embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
     return embeddings
 
