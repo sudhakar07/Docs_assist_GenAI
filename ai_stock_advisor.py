@@ -149,8 +149,8 @@ def main_AIStockAdvisor():
     advisor = AIStockAdvisor()
 
     # Stock symbol selection
-    selected_symbol = st.sidebar.selectbox(
-        'Choose a Stock', 
+    selected_symbol = st.selectbox(
+        'Choose a Stock - Company', 
         TOP_STOCKS, 
         index=0
     )
