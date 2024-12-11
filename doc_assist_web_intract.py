@@ -73,6 +73,8 @@ def get_chunks(texts, chunk_size, chunk_overlap):
         split_texts = text_splitter.split_text(text.page_content)
         for split_text in split_texts:
             chunks.append(Document(page_content=split_text, metadata=text.metadata))
+            
+    st.write(chunks)
     return chunks
 
 def get_embeddings_google():
