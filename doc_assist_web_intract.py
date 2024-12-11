@@ -20,9 +20,10 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_groq import ChatGroq
 
 
-genai.configure(api_key='AIzaSyChNUtW6XZ5lUiWnFqU4SgcOEwLKeLq8q4')
-os.environ["GOOGLE_API_KEY"] = 'AIzaSyChNUtW6XZ5lUiWnFqU4SgcOEwLKeLq8q4'
-os.environ["GROQ_API_KEY"] = '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'
+api_key_secrectpass = st.secrets["api_key"]
+genai.configure(api_key=api_key_secrectpass)
+Groq_api_key_secrectpass = st.secrets["GROQ_API_KEY"]
+os.environ["GROQ_API_KEY"] = Groq_api_key_secrectpass
 
 # Function to configure proxy settings if needed
 def configure_proxy(use_proxy):
