@@ -80,6 +80,7 @@ def get_chunks(texts, chunk_size, chunk_overlap):
 def get_embeddings_google():
     genai.configure(api_key=api_key_secrectpass)
     embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
+    st.write(embeddings)
     return embeddings
 
 # Store text chunks in a vector store using FAISS
