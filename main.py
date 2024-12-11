@@ -23,9 +23,10 @@ genai.configure(api_key=api_key_secrectpass)
 def main():
    
     # Add navigation
+    st.sidebar.info("Only for Learning Purpose.Developed by - Sudhakar G.")
     page = st.sidebar.radio("Navigate", ["Admin Page", "Document Assist", "DocAssist with Field-Highlight","LLM Intract","AI Stock Advisor"])
-    st.sidebar.info("Developed by - Sudhakar G.")
-    st.sidebar.info("Only for Learning Purpose.")
+    
+    
     
     if page == "Admin Page":
         admin_page()
