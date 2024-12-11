@@ -36,9 +36,10 @@ def configure_proxy(use_proxy):
 def read_data(files, loader_type):
     documents = []
     for file in files:
-        with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
-            tmp_file.write(file.read())
-            tmp_file_path = tmp_file.name
+        
+        with io.open(os.path.join('temp', file.name), 'wb') as f:
+            f.write(file.read())
+            tmp_file_path = f.name
 
         st.write(tmp_file_path)
         try:
