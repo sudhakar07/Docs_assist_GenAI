@@ -64,7 +64,7 @@ def locate_pages_containing_excerpts(document, excerpts):
     return relevant_pages if relevant_pages else [0]
 
 
-@st.cache_resource
+
 def initialize_language_model():
     return ChatGroq(
         temperature=0,
@@ -82,13 +82,13 @@ def initialize_language_model():
 #     return embeddings
 
 
-@st.cache_resource
+
 def get_embeddings_google():
     genai.configure(api_key=api_key_secrectpass)
     embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
     return embeddings
 
-@st.cache_resource
+
 def generate_embeddings(_texts_ext):
         genai.configure(api_key='')
         # """
