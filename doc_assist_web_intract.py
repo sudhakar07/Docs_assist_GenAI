@@ -1,7 +1,7 @@
 import streamlit as st  # Streamlit is used to create the web app interface
 from PyPDF2 import PdfReader  # PyPDF2 is used to read PDF files
 from langchain.text_splitter import RecursiveCharacterTextSplitter  # Splits text into manageable chunks
-
+import io
 # pip install -U langchain-community
 from langchain_community.vectorstores import FAISS  # Vector store to store and retrieve text embeddings using FAISS
 from langchain_community.document_loaders import TextLoader, CSVLoader  # Loaders for text and CSV documents
