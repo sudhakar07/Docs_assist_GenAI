@@ -78,7 +78,7 @@ def get_chunks(texts, chunk_size, chunk_overlap):
     return chunks
 
 def get_embeddings_google():
-    
+    genai.configure(api_key=api_key_secrectpass)
     embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
     return embeddings
 
@@ -87,6 +87,7 @@ def vector_store(text_chunks, embedding_model_name, vector_store_path):
     # embeddings = OllamaEmbeddings(base_url="http://localhost:11434", model=embedding_model_name)
     embeddings = get_embeddings_google()
     vector_store = FAISS.from_texts(texts=[doc.page_content for doc in text_chunks], embedding=embeddings, metadatas=[doc.metadata for doc in text_chunks])
+    st.write(vector_store_path)
     vector_store.save_local(vector_store_path)
 
 # Load the vector store using FAISS
