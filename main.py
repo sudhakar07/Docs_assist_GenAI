@@ -12,7 +12,7 @@ from user_chat_page_v1 import user_chat_page_v1
 from doc_assist_with_highlight import response_highlight
 from doc_assist_web_intract import main_web_intract
 from ai_stock_advisor import main_AIStockAdvisor
-from PII_mask_RAG import pii_rai_main
+#from PII_mask_RAG import pii_rai_main
 
 # Load environment variables
 load_dotenv()
@@ -39,8 +39,8 @@ def main():
         main_web_intract()
     if page == "AI Stock Advisor":
         main_AIStockAdvisor()
-    if page == "PII-Mask RAI-RAG Chat":
-        pii_rai_main()
+    #if page == "PII-Mask RAI-RAG Chat":
+        #pii_rai_main()
     # else:
     #     user_chat_page()
 
