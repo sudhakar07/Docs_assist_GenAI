@@ -16,8 +16,9 @@ import os
 # pip install llama-index-llms-gemini llama-index-embeddings-gemini llama-index-postprocessor-presidio
 
 # pip install presidio-analyzer presidio-anonymizer
-genai.configure(api_key='AIzaSyChNUtW6XZ5lUiWnFqU4SgcOEwLKeLq8q4')
-os.environ["GOOGLE_API_KEY"] = 'AIzaSyChNUtW6XZ5lUiWnFqU4SgcOEwLKeLq8q4'
+api_key_secrectpass = st.secrets["api_key"]
+genai.configure(api_key=api_key_secrectpass)
+os.environ["GOOGLE_API_KEY"] = api_key_secrectpass
 
 class PIISafeRAGApplication:
     def __init__(self):
@@ -373,9 +374,9 @@ class PIISafeRAGApplication:
             st.sidebar.write("EMPLOYEE_ID   -  \\b[A-Z]{3}\\d{4}\\b")
             self.render_custom_entity_tab()
 
-def main():
+def pii_rai_main():
     app = PIISafeRAGApplication()
     app.render_app()
 
 if __name__ == "__main__":
-    main()
+    pii_rai_main()
