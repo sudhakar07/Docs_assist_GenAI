@@ -5,7 +5,7 @@ google-api-core==2.23.0
 google-api-python-client==2.154.0
 google-auth==2.36.0
 google-auth-httplib2==0.2.0
-google-generativeai
+google-generativeai==0.8.3
 googleapis-common-protos==1.66.0
 nest-asyncio==1.6.0
 networkx==3.4.2
@@ -50,7 +50,7 @@ SQLAlchemy==2.0.36
 stack-data==0.6.3
 streamlit==1.40.2
 langchain==0.3.9
-langchain-core==0.3.24
+langchain-core==0.3.21
 langchain-text-splitters==0.3.2
 langsmith==0.1.147
 langchain-google-genai
@@ -61,9 +61,3 @@ yfinance
 plotly
 beautifulsoup4
 requests
-llama-index
-llama-index-llms-gemini
-llama-index-embeddings-gemini
-llama-index-postprocessor-presidio
-presidio-analyzer
-presidio-anonymizer
