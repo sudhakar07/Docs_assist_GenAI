@@ -3,7 +3,7 @@ import google.generativeai as genai
 import traceback
 from typing import List, Dict, Any
 import re
-# LlamaIndex Imports
+
 from llama_index.core import VectorStoreIndex, Document, Settings
 from llama_index.core.node_parser import SentenceSplitter
 from llama_index.llms.gemini import Gemini
