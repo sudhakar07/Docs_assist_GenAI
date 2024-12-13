@@ -61,3 +61,8 @@ yfinance
 plotly
 beautifulsoup4
 requests
+llama-index-llms-gemini
+llama-index-embeddings-gemini
+llama-index-postprocessor-presidio
+presidio-analyzer
+presidio-anonymizer
