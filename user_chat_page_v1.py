@@ -202,7 +202,7 @@ class EnhancedDocumentAssistant:
         context = "\n".join([chunk['chunk'] for chunk in relevant_chunks])
         
         # Generate response using Gemini
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('gemini-1.5-pro')
         response = model.generate_content(
             f"Context: {context}\n\nQuery: {query}\n\nGenerate a comprehensive answer based on the context."
         )
@@ -222,7 +222,7 @@ class EnhancedDocumentAssistant:
             username=username,
             query=query,
             response=full_response,
-            model_name='gemini-pro',
+            model_name='gemini-1.5-pro',
             response_time=response_time,
             source_document=', '.join(set(chunk['metadata']['filename'] for chunk in relevant_chunks))
         )
