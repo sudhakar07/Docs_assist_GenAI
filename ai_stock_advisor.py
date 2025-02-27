@@ -21,7 +21,7 @@ TOP_STOCKS = [
 class AIStockAdvisor:
     def __init__(self):
         # Initialize Gemini model
-        self.model = genai.GenerativeModel('gemini-pro')
+        self.model = genai.GenerativeModel('gemini-1.5-pro')
 
     def fetch_stock_data(self, symbol, period='1mo'):
         """
